@@ -1,0 +1,24 @@
+d = np.zeros(100)
+f = np.linspace(0,20,100)
+n = np.linspace(1,9,9, endpoint=True)
+harmonics = []
+for idx, element in enumerate(n):
+  d =np.sin(f*element)
+  harmonics.append(d)
+
+harmonics = np.array(harmonics)
+harmonics = np.expand_dims(harmonics, axis=0)
+harmonics = harmonics.reshape((3,3,100))
+Segundo bloque de cod
+
+
+nrow = 3
+ncol = 3
+fig, axes = plt.subplots(nrow, ncol, figsize= (12,7))
+for idx in range(nrow):
+  for jdx in range(nrow):
+    axes[idx, jdx].plot(f, harmonics[idx, jdx])
+    axes[idx, jdx].set_title(f'Harmonic of Sin(f)')
+
+fig.tight_layout()
+plt.show()

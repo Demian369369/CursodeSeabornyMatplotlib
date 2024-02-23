@@ -1,0 +1,51 @@
+⚠ Datos Importantes:
+
+Este parametro afecta a todas las graficas que creamos, incluidas las que no usan seaborn.
+Podemos resetear los valores usando el metodo reset_orig.
+Este parametro es un atajo de set_theme, que es el recomendado segun la documentacion 
+
+Hola, no sé si aún necesites ayuda con esto, pero encontré una forma de solucionarlo. Solucioné el problema en Deepnote, pero yo creo que en Google Colab podría funcionar también.
+
+buscas el archivo de la fuente que quieres usar. Yo la saqué de C:\Windows\Fonts en mi computadora, pero puedes encontrarlo en internet. Lo importante es que el archivo termine en ".ttf".
+Este archivo lo subí a Deepnote (use verdana porque es el que se usa en la clase). !
+
+Sin título.png
+Toca importar el font manager de matplot.
+
+from matplotlib.font_manager import fontManager,FontProperties
+instalar la fuente:
+
+path = "/work/verdana.ttf" #el path se copia del archivo que se subió a deepnote. 
+fontManager.addfont(path)
+
+prop=FontProperties(fname=path)
+sns.set(font=prop.get_name())
+ya después solo es necesario llamar la fuente como se hizo en la clase y listo :D
+
+sns.get_dataset_names()
+
+  Datos biológicos:
+
+anagrams: Conjunto de palabras que pueden reorganizarse para formar otras palabras (ej. "silent" y "listen").
+anscombe: Cuatro conjuntos de datos que comparten la misma dispersión pero tienen diferentes relaciones subyacentes entre las variables.
+brain_networks: Conectividad funcional entre regiones del cerebro humano.
+exercise: Datos de actividad física de 101 adultos durante una semana.
+geyser: Duración entre erupciones del Old Faithful Geyser en el Parque Nacional de Yellowstone.
+iris: Características de las flores de iris de tres especies diferentes.
+penguins: Características físicas y de comportamiento de tres especies de pingüinos en la Isla Palmer.
+planets: Características orbitales y físicas de planetas extrasolares.
+  Datos económicos y financieros:
+
+diamonds: Características y precios de diamantes.
+dowjones: Índices diarios del Dow Jones Industrial Average.
+healthexp: Gastos en salud per cápita por estado de EE. UU.
+mpg: Consumo de combustible y otras características de automóviles.
+taxis: Viajes en taxi en la ciudad de Nueva York.
+tips: Propinas dejadas en un restaurante y otra información sobre la comida.
+  Datos estadísticos y de simulación:
+
+attention: Datos simulados sobre la atención visual humana.
+dots: Distribución espacial de puntos generados al azar.
+flights: Información sobre vuelos entre 33 ciudades de EE. UU.
+glue: Conjuntos de datos de texto para tareas de procesamiento de lenguaje natural.
+seaice: Concentración de hielo marino en el Ártico.

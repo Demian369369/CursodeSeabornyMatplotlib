@@ -1,0 +1,11 @@
+En este caso hicimos un gráfico que contiene 2 filas y 3 columnas, por lo que vamos a tener un gráfico compuesto por 6 gráficos.
+
+Con los índices indicamos donde queremos que cada gráfico se ejecute y los índices se ordenan de la siguiente forma:
+
+1 2 3
+
+4 5 6
+
+x= [ 1,2,3,4,5,7,9,14] y= [ 1,4,8,6,5,10,9,11]
+
+plt.subplot(2,3,1) plt.plot(x,y) # Gráfico de lineas plt.subplot(2,3,2) plt.plot(x,y,'o') # Gráfico de lineas con puntos plt.subplot(2,3,3) plt.pie(x) # Gráfico de torta plt.subplot(2,3,4) plt.boxplot(x) # Gráfico de cajas plt.subplot(2,3,5) plt.bar(x,y) # Gráfico de barras plt.subplot(2,3,6) plt.hist(x) # Gráfico histograma

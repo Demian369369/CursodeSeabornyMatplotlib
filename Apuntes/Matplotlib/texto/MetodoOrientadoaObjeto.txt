@@ -1,0 +1,61 @@
+Método Orientado a Objetos
+Pyplot
+
+Rápido
+Fácil
+Una sola figura
+Object Oriented
+
+Mayor personalización
+Más código
+Más amigable a multiples diagramas
+Un objeto define una figura, esa figura es un lienzo en el cual podemos introducir diferentes graficas(axes), de las cuales cada una posee sus propios ejes(axis).
+
+La figura representa el todo, dentro de ella vamos a configurar graficas las cuales contienen diferentes ejes
+
+
+
+https://static.platzi.com/media/user_upload/Captura-845012cb-41c1-4c4b-bad5-427afbf00703.jpg
+
+Creamos los datos a graficar:
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0,5,11)
+y = x**2
+Utilizamos el concepto de objeto para crear una grafica mas personalizable:
+
+#parametros de axes: [pos eje x, pos eje y, size graph eje x, size graph eje y]
+fig = plt.figure() #Objeto
+axes = fig.add_axes([0.1, 0.1, 0.5, 0.9]) #Grafica
+axes.plot(x,y,'b') #Plot
+fig.show()
+
+
+graphic11.png
+
+Podemos crear varias graficas dentro del lienzo llamando el metodo fig
+
+fig = plt.figure() #Objeto
+axes = fig.add_axes([0.1, 0.1, 0.8, 0.9])    #Grafica 1 del Objeto
+axes2 = fig.add_axes([0.17, 0.55, 0.4, 0.3]) #Grafica 2 del Objeto
+
+axes.plot(x,y,'b')   #Plot 1
+axes2.plot(y,x,'r')  #Plot 2
+axes2.set_facecolor('gray')
+fig.show()
+
+
+graphic12.png
+Cuando el profe escribe la siguiente sentencia: axes = fig.add_axes([0.1,0.1,0.8,0.9])
+
+Esto es lo que pasa (leyendo de izquierda a derecha)
+
+El primer valor 0.1, significa que la figura comienza al 10% desde el lado izquierdo, en sentido horizontal (eje x).
+
+El segundo valor 0.1, significa que la figura comienza al 10% desde la parte inferior, en sentido vertical (eje y).
+
+El tercer valor 0.8, establece el ancho de la imagen que se extiende hasta el 80% del lienzo.
+
+El cuarto valor 0.9 establece la altura de la imagen que se extiende hasta el 90% del lienzo.

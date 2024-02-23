@@ -1,0 +1,33 @@
+cheatsheet de seaborn. https://cheatography.com/aggialavura/cheat-sheets/python-seaborn-imgs/ Y está imagen que encontré:
+
+0_Cfo6qfxirL4STHTY1.png
+Sitio web: https://deeplearning.fr/seaborn-cheats/
+
+on este metodo puedes ver los datasets disponibles en seaborn: sns.get_dataset_names() -->['anagrams', 'anscombe', 'attention', 'brain_networks', 'car_crashes', 'diamonds', 'dots', 'exercise', 'flights', 'fmri', 'gammas', 'geyser', 'iris', 'mpg', 'penguins', 'planets', 'taxis', 'tips', 'titanic']
+
+Si desean que las imágenes salgan más nítidas, pueden aumentar el dpi (densidad de píxeles) usando la siguiente instrucción:
+
+
+sns.set(rc={"figure.dpi":300})
+De preferencia la podrían colocar después de importar la librería
+
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+sns.set(rc={"figure.dpi":300})
+
+Seaborn tiene ciertos datos pre cargados que podemos usar para practicar
+
+El primer parámetro que usaremos es el de la data en donde especificamos que dataset estaremos usando para graficar
+
+El parámetro x lo usamos para definir los datos que estarán en el eje x
+
+Usamos el parámetro y para definir la variable que estará en este eje
+
+Seaborn nos sugiere gráficos
+
+Con el parámetro hue puedo hacer un desglose o agrupamiento de otra variable
+
+Parámetros principales: La data, eje x, eje y, y como lo voy a segmentar con hue
+
+Igualmente, aquí tenemos el parámetro legend, palette y alpha

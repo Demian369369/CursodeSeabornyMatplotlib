@@ -1,0 +1,44 @@
+Seaborn
+Escrita por Michael Waskom.
+Esta construida sobre Matplotlib por lo que hereda todas las bondades de la misma.
+Integrada para estructuras de Pandas por lo que esta optimizada para funcionar con dataFrames.
+Ventajas
+Velocidad.
+Poco codigo.
+Altamente customizable a nivel de graficas y visualizaciones.
+Estructura Basica
+
+sns.'Tipo de Grafica'(
+		 data='Dataset',
+		 x='Data en el eje x',
+		 y='Data en el eje y',
+		 hue='Variable de agrupamiento')
+Tipos de Graficas
+relplot (relacional): scatterplot, lineplot.
+displot (distribuciones): histplot, kdeplot, ecdfplot, rugplot.
+catplot (categorica): stripplot, swamplot, boxplot, violinplot, pointplot, barplot
+
+Seaborn
+Seaborn es una librería construida sobre Matplotlib, por lo que hereda todas las bondades de la misma. Fue escrita por Michael Waskom y está integrada para estructuras de Pandas por lo que está optimizada para funcionar con DataFrames.
+
+Cuáles son las ventajas de Seaborn
+Seaborn tiene diferentes ventajas y entre ellas encuentras principalmente:
+
+Tiene una gran velocidad Facilidad para escribir código Altamente customizable entre gráficas y visualizaciones
+
+Cuál es la estructura Básica de Seaborn
+[1]
+1 s
+import matplotlib.pyplot as plt
+import seaborn as sns
+[5]
+0 s
+![299.png](https://static.platzi.com/media/user_upload/299-7628193e-2999-432c-8233-b76026a23a8e.jpg)
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.distplot([0, 1, 2, 3, 4, 5,6,7,8,9], hist=False)
+
+plt.show()
+

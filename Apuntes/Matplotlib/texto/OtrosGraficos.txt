@@ -1,0 +1,17 @@
+Respecto al scatter que graficamos, lo modifiqué para que los valores (x,y) sean los que se coloquen en area, en lugar de un valor aleatorio.
+
+por medio de: area = x * y * 100 multiplicamos los valores x y y, para después escalarlos por 100 y obtener el área proporcional basada en estos valores
+
+el código funciona, pero no estoy seguro de haberlo hecho adecuadamente. Alguien podría revisarlo? o quizás proponer alguna idea que cumpla mejor este objetivo?
+
+
+N = 50
+x = np.random.rand(N)
+y = np.random.rand(N)
+area = x * y * 100  
+
+colors = np.random.rand(N)
+
+plt.scatter(x, y, s=area, c=colors, marker= 'o', alpha=0.8)  # tamaño de puntos = x•y•100 
+
+plt.show()
